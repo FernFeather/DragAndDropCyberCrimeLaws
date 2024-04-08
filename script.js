@@ -125,8 +125,8 @@ function mousePressed() {
     }
   }
 
-  else if (screen === 3) {// if on the instructions/restart/lose screen
-    //press begin button or restart button pressed
+  else if (screen === 3 && round2 === false) {// if on the win screen
+    //press next button or restart button pressed
     if (mouseX > width / 2 - 50 && mouseX < width / 2 + 50 && mouseY > height / 2 + 120 && mouseY < height / 2 + 160) {
       screen = 5;
       round2Setup();
@@ -137,6 +137,21 @@ function mousePressed() {
       UnlawfulAccess.position = createVector(width / 2 + 110, height - (height / 3) + 95);
       //Question2Img.pos = { x: 190, y: 285 };
 
+    }
+  }
+
+  else if (screen === 3 && round2 === true) {// if on the win screen of second game
+    //press begin button or restart button pressed
+    if (mouseX > width / 2 - 50 && mouseX < width / 2 + 50 && mouseY > height / 2 + 120 && mouseY < height / 2 + 160) {
+      screen = 0;
+      // screen = 2;
+      // FraudAndDevices.position = createVector(width / 4 - 67, height - (height / 3) + 95);
+      // FraudAndComputers.position = createVector(width / 2 - 145, height - (height / 3) + 175);
+      // Communication.position = createVector(width / 2 - 60, height - (height / 3) + 95);
+      // Interception.position = createVector(width / 2 + 33, height - (height / 3) + 175);
+      // UnlawfulAccess.position = createVector(width / 2 + 110, height - (height / 3) + 95);
+      // Cyberlaws.pos = { x: 190, y: 285 };
+      // Cybercrime.pos = { x: width / 2, y: 160 + 95 };
     }
   }
 
